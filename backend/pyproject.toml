@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "anime-api"
+version = "0.1.0"
+description = "API for anime series tracking"
+authors = ["losthope <arsen.melnuchyk@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.5"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
