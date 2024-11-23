@@ -1,6 +1,19 @@
 from datetime import datetime, date
-from pydantic import BaseModel, validator
+from pydantic import (
+    BaseModel,
+    validator,
+    EmailStr,
+    Field,
+    SecretStr
+)
 from typing import Optional
+from enum import IntFlag
+
+
+class Role(IntFlag):
+    USER = 0
+    MODERATOR = 1
+    ADMIN = 2
 
 
 class Anime(BaseModel):
@@ -15,9 +28,10 @@ class Anime(BaseModel):
 class User(BaseModel):
     id: int
     username: str
-    email: str
-    password: str
+    email: EmailStr
+    password: SecretStr = Field(description="The password of the user", exclude=True)
     age: int
+    role: Role = Field(description="The role of the user", default=Role.USER)
 
     animes: list[Anime]
     registered_date: datetime = datetime.now().replace(second=0, microsecond=0)

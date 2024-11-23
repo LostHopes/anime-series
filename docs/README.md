@@ -39,7 +39,11 @@ Feel free to request your changes.
 
 ## Discussions
 
-## Messages
+1. User can create discussions if logged in
+2. User can edit the message
+3. User can reply to the message (create thread)
+4. User can delete the message
+5. Moderator/admin can close the discussion in case of rules violation
 
 # Designing database schemas
 
