@@ -7,13 +7,14 @@ Feel free to request your changes.
 
 1. User can register account with Google, GitHub or directly through service.
 2. User must have strong password (more than 8 characters, which includes digits and symbols. E.g. $, #, !, ?)
-3. User must verify person through captcha
+3. User must confirm he's not a bot through captcha
 4. User can enable 2FA in the profile
 5. User can decide whether to keep logged in the account
 6. User can recover his password through email
 7. User can delete his account permanently with all data (in case of attack or user decision the data will be stored on the server for 90 days)
 8. User can change account privacy (private except friends, publicly available for anyone)
 9. User can change the username (with interval of 30 days)
+10. User can change personal theme from the list.
 
 ## Friends
 
