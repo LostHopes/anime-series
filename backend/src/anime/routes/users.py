@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 
 
 router = APIRouter(
-    prefix="/users/",
+    prefix="/users",
     tags=["users"]
 )
 
