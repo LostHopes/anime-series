@@ -19,8 +19,8 @@ pytest = "^8.3.4"
 pytest-coverage = "^0.0"
 httpx = "^0.28.1"
 
-[tool.pytest]
-addopts = "-v src/tests"
+[tool.pytest.ini_options]
+addopts = "-v --cov=anime src/tests/"
 
 [build-system]
 requires = ["poetry-core"]
