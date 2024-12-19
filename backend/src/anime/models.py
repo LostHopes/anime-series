@@ -18,6 +18,14 @@ class Role(IntFlag):
     ADMIN = 2
 
 
+class AnimeDiscussion(BaseModel):
+    id: PositiveInt = Field("Id of the anime discussion")
+    title: str = Field(description="Title of the anime discussion")
+    date_written: datetime = Field(description="Date of the creation anime discussion")
+    users: list[User] = Field("Users participated in the discussion")
+    last_message: datetime = Field("Last message of the anime discussion")
+
+
 class Anime(BaseModel):
     id: PositiveInt = Field(description="Id of anime")
     eng_name: str = Field(description="English name of anime")
@@ -38,14 +46,6 @@ class User(BaseModel):
     animes: list[Anime] = Field("User's collection of anime")
     registered_date: datetime = Field("Date of the user registration")
     last_login: datetime = Field("Date of the user last login")
-
-
-class AnimeDiscussion(BaseModel):
-    id: PositiveInt = Field("Id of the anime discussion")
-    title: str = Field(description="Title of the anime discussion")
-    date_written: datetime = Field(description="Date of the creation anime discussion")
-    users: list[User] = Field("Users participated in the discussion")
-    last_message: datetime = Field("Last message of the anime discussion")
 
 
 class UserMessage(BaseModel):
