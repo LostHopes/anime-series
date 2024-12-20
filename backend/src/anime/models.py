@@ -1,10 +1,12 @@
 from datetime import date, datetime
 from enum import IntFlag
 from typing import List, Optional
-
-from fastapi import FastAPI, Depends
-from pydantic import EmailStr, Field, PositiveInt, SecretStr
-from sqlmodel import Field, Relationship, SQLModel, create_engine
+from pydantic import (
+    EmailStr, PositiveInt
+)
+from sqlmodel import (
+    Field, Relationship, SQLModel, create_engine
+)
 
 
 class Role(IntFlag):

@@ -1,4 +1,3 @@
-from anime.routes import anime, users
 from anime import app
 from anime.models import create_db_and_tables
 
