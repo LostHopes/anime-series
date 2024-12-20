@@ -1,4 +1,6 @@
 from fastapi import APIRouter, Depends
+from anime.models import Anime, User
+from anime.dependencies import SessionDep
 
 
 router = APIRouter(
@@ -8,10 +10,12 @@ router = APIRouter(
 
 @router.get("/")
 async def get_all():
+    session: SessionDep
     return {"anime": "Jojo"}
 
-@router.get("/{id}")
-def get_item(id: int):
+@router.get("/{name}")
+def get_item(name: str):
+    session: SessionDep
     return
 
 
