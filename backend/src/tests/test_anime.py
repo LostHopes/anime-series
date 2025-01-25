@@ -1,8 +1,4 @@
-from fastapi.testclient import TestClient
-from anime import app
-
-
-client = TestClient(app)
+from tests import client
 
 
 def test_get_all_anime():
